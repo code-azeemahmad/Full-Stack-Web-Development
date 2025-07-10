@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables in HTML</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tables in HTML - Example</h1>
+    <caption>Students Enrolled</caption>
     <table>
-        <tr>
+        <thead>
+            <tr>
             <th>Name</th>
             <th>Department</th>
             <th>Marks</th>
         </tr>
-        <tr>
+        </thead>
+        <tbody>
+            <tr>
             <td>Azeem</td>
             <td>Computer Science</td>
             <td>1096</td>
@@ -28,7 +32,9 @@
             <td>MBBS</td>
             <td>1100</td>
         </tr>
-        <tr>
+        </tbody>
+        <tfoot>
+            <tr>
             <td colspan="2">Faheem</td>
             
             <td rowspan="2">1100</td>
@@ -36,10 +42,9 @@
         <tr>
             <td>Husnain</td>
             <td>MBBS</td>
-            
         </tr>
+        </tfoot>
     </table>
-    
 </body>
 </html>
 
@@ -82,4 +87,10 @@ Tip: By default, a table caption will be center-aligned above a table. However, 
 <tfoot> tag for table footer at the end of table
 
 After placing <thead> and <tfoot>, the content of tables's body wil should be placed in <tbody> tag. The <tbody> tag is used to define the body of a table
+-->
+
+<!--
+
+<thead>, <tfoot>, <tbody> tags are just for grouping or formatting.
+
 -->
