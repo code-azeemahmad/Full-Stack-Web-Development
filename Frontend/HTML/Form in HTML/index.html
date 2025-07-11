@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms - Let's learn it</title>
+  </head>
+  <body>
+    <form action="post"></form>
+    <h1>Form to apply for Sigma Web Develepoment Course - TA</h1>
+    <div>
+      <label for="username">Enter Your Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Azeemnadeem@example.com"
+        required 
+        autofocus                                
+      />
+    </div>
+    <!-- id for the label(for="id") and input field(uniquely identify) should be same  -->
+    <div>
+      <label for="password">Enter Password</label>
+      <input type="text" id="password" name="password" placeholder="********"  required/>
+    </div>
+    <label for="gender">Enter your Gender</label>
+    <div>
+      <input type="radio" name="gender" id="male" value="Male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="Female" />
+      <label for="female">Female</label>
+    </div>
+    <div>
+      <input type="checkbox" name="subscribe" id="subscribe" />
+      <label for="subscribe">Subscribe to Youtube Channel</label>
+    </div>
+    <div>
+        <label for="comment">Suggestions</label>
+        <br>
+        <textarea name="comment" id="comment" rows="4" cols="50" placeholder="Enter your comment here.."></textarea>
+    </div>
+    <div>
+        
+        <select name="fruit" id="fruit">
+            <option value="Apple">Apple</option>
+            <option value="Cherry">Cherry</option>
+            <option value="Pear">Pear</option>
+        </select>
+    </div>
+    <div>
+        <button type="Submit">Submit</button>
+    </div>
+  </body>
+</html>
+
+<!-- Instead of using <br> tag, make separate Div of everything -->
+
+<!-- write form and press enter
+get is for very simple request used just to tell or hit server something
+post is for more complex request used to send large data -->
+
+<!-- The text input type is the most basic form of input and is widely
+used for collecting simple text data.
+<input type="text" name="username" placeholder="Enter your username">
+In the above example, the placeholder attribute provides a hint
+to the user about what to enter in the input field. 
+
+Email and Password Label and Input occur in same line, so instead of 
+using <br> tag, we make separate divs to style them better in css and
+also place one of them to next line
+
+label tag and input tag are always used together
+
+type="radio" is to select one option from multiple options but
+you have to click on dot to select it.
+If you want to select the option by clicking on the respective
+label of that dot, then make the id in label and input tag same
+
+make the names same to make sure that user select only one option
+
+autofocus automatically places the cursor in the targeted input
+
+VALIDATION ATTRIBUTES
+1.required
+As mentioned above, this attribute makes a field mandatory.
+
+<input type="text" required>
+
+2.pattern
+The pattern attribute specifies a regular expression that the input must match to be valid.
+
+<input type="text" pattern="[a-zA-Z0-9]+">
+
+-->

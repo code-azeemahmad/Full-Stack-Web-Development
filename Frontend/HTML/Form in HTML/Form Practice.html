@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Application for Teaching Assistant</h1>
+    <form action="post">
+      <div>
+        <label for="Username">Enter Your Good Name </label>
+        <input type="text" id="Username" name="username" placeholder="Enter Your Username" autofocus required/>
+      </div>
+      <div>
+      <label for="Gender">Select your Gender</label>
+      <input type="radio" id="male" name="Gender" value="Male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="Gender" value="Female">
+      <label for="female">Female</label>
+      </div>
+      <div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">Did you subscribed our channel?</label>
+      </div>
+      <div>
+        <label for="comment">Enter your Remarks here...</label>
+        <br>
+        <textarea id="comment" name="comment" rows="4" cols="50">
+        </textarea>
+      </div>
+      <div>
+        <select name="Fruits" id="fruit">
+            <option value="Apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Cherry">Cherry</option>
+        </select>
+      </div>
+
+
+    </form>
+  </body>
+</html>
+
+<!--
+
+📌 id="male" and id="female"
+id is a unique identifier for that specific input.
+It helps the browser (and the label) know which input to link to.
+
+🧑‍🤝‍🧑 name="Gender"
+This groups radio buttons together.
+All radio buttons with the same name belong to the same group.
+It means the user can select only one option from the group.
+💡 Without the same name, the user could select both Male and Female, which defeats the point of a single-choice input.
+
+💾 value="Male" and value="Female"
+This is the actual value that gets sent to the server when the form is submitted.
+If a user selects "Male" and submits the form, the data sent might look like:
+Gender=Male
+
+
+-->
