@@ -1,0 +1,14 @@
+.red                        /*use dot to call a class*/
+{
+    color: red;        
+} 
+
+.bg-yellow
+{
+    background-color: rgb(220, 255, 44);
+}
+
+#seconddiv                  /*use hashtag to call a div */
+{
+    background-color: beige;
+}
