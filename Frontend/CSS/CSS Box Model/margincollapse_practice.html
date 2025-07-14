@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        .box{
+            background: aqua;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            color: red;
+            padding: 10px; 
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        .box2{
+            color: yellow;
+            padding: 10px; 
+            margin: 50px;
+            border: 2px solid rgb(0, 0, 0);
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Hey, I am a box</div>
+    <div class="box box2">Hey, I am another box</div>
+</body>
+</html>
+
+<!--
+
+Horizontal Margin Always Adds up
+
+Vertical Margins collapse
+box1 --/> 25px   
+box2 --/> 25px   
+one of them will be collapsed and margin == 25px will separate two contents
+
+box1 --/> 25px  will be collapsed as 25 < 50
+box2 --/> 50px  will be applied
+
+
+-->

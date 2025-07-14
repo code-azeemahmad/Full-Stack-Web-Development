@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        .box{
+            background: aqua;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            color: red;
+            padding: 10px; 
+            margin: 2px;
+            border: 5px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        .box2{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Hey, I am a box</div>
+    <div class="box box2">Hey, I am another box</div>
+</body>
+</html>
+
+
+<!--"div.box" to make a div with class "box" assigned to it -->
+
+<!--
+Background color applies to content and extends to padding.
+Padding inner to content and margin is outer to content.
+❗ Margins don’t affect the box’s size—they just push the box away from other elements.
+-->
+
+<!--
+
+By default, when you set width: 200px;, it means:
+        "Content should be 200px wide — then padding and border are added on top of that!"
+So the actual box becomes wider than what you expected.
+
+✅ Solution: box-sizing: border-box;
+This is where the magic comes in!
+
+.box {
+  box-sizing: border-box;
+}
+
+🔧 What it does:
+Makes the width and height include padding and border.
+
+🧪 Example:
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+✅ Now the entire box stays 200px wide. The padding and border are calculated inside that width.
+
+200 - 2(20) - 2(5) = 150px
+✔️ Content area is reduced to 150px
+to fit padding and border inside the 200px box.
+
+-->
+
+<!--
+
+with border-box, size = 200 = 150 + 2(20) + 2(5)
+without border-box, size = 250 =200 + 2(20) + 2(5)
+
+It makes layouts easier, cleaner, and predictable.
+
+-->
