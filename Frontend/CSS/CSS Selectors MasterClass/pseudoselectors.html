@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        /*                                     PSEUDO SELECTORS                                         */
+
+        a:link
+        {
+            color: blue;               /* color before visiting the link */
+        }
+
+        a:visited
+        {
+            color: red;               /* color changes after visiting the link */
+        }
+
+        a:active
+        {
+            background-color: khaki;             /* color changes for a second when the link is clicked */
+        }
+
+        a:hover
+        {
+            background-color: aquamarine;        /* color changes when the link is hovered */
+        }
+
+        p:first-child
+        {
+            color: darkblue;
+            background-color: aqua
+        }
+
+       /* p:second-child
+        {                           not applicable for second child
+            color: crimson;
+        } */
+        
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+            Hey! I am First Child because I come First and I am a child of the main element.
+        </p>
+        <p>
+            Hey! I am Second Child because I come Second and I am a child of the main element.
+        </p>
+    </main>
+    
+
+
+    <a href="https://www.google.com">Go to Google </a>    <br>
+    <a href="https://www.facebook.com">Go to Facebook</a>     <br>
+    <a href="https://www.instagram.com">Go to Instagram</a>
+    
+</body>
+</html>

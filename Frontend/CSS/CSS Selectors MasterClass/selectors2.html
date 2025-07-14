@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        #red                                          /* #Id Selector */
+        {
+            color: red;
+            background-color: bisque;
+        }
+        .blue                                         /* .Class Selector */
+        {
+            color: rgb(0, 55, 255);
+            background-color: burlywood;
+        }
+        div > p                                       /* >Child Selector*/
+        {
+            color: green;
+        }
+        div p                                         /* _Descendent Selector*/
+        {
+            color: rgb(238, 158, 254);
+        }
+        *                                             /* *Universal Selector*/
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="red">
+        I am first div
+    </div>
+    <div class="blue"> 
+        I am second div
+        <p>
+            Hey! This Green paragraph is for Child Selector
+        </p>
+    </div>
+     <div>
+    <article>
+        I am third another div
+        <p>
+            Hey! This purple paragraph is for Descendent Selector
+        </p>
+    </article>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+<!--
+
+<style>
+    div > p
+    {
+        color: green                      /*The colour will not apply to paragraph because
+                                            it is not a direct chid of paragraph, its child
+                                            of article (indirect child)*.
+    }
+    <\style>
+
+<div class="blue"> 
+    <article>
+        I am another div
+        <p>
+            Hey! This Green paragraph is for Child Selector
+        </p>
+    </article>
+    </div>
+
+-->
+
+
+<!--
+
+<style>
+    div p                                 /*Spacebar*/
+    {
+        color: green                      /*Element should be present in div whether
+                                            it is div's direct child or indirect child(descendent)*/.
+    }                             
+    <\style>
+
+<div class="blue"> 
+    <article>
+        I am another div
+        <p>
+            Hey! This Green paragraph is for Child Selector
+        </p>
+    </article>
+    </div>
+
+-->
