@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model - CSS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .box {
+            background-color: bisque;
+        }
+        .box1 {
+            color: rgb(255, 1, 247);
+            padding: 10px;
+            border: 2px solid blue ;
+            margin: 5px;
+            height: 200px;
+            box-sizing: border-box;         /* Add only Padding and Border as total height or width */
+        }
+        .box2 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box box1"> I am first Box</div>
+    <div class="box box2"> I am second Box</div>
+
+</body>
+</html>
+
+<!-- Browser add margin and padding by default-->
+<!-- p:0 for padding: 0px; -->
+<!-- m:0 for margin: 0px; -->
+<!-- background color remains in padding. It means
+     padding applies to inside of content but its
+     not the part of content -->
+<!-- while, margin is outside of padding-->
+
+
+
+<!-- write click on page to inspect and hover on
+     code line to see padding, border or margin visible
+     click on computed to see picture of box model -->
+
+<!--
+
+                            Content
+                            Padding
+                            Border
+                            Margin
+
+-->
+
+
+
+<!--   Without box border
+
+Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+
+Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin 
+
+
+
+before border box, height & width = content + padding + border + MARGIN
+
+after border box, height & width = content + padding +border
+
+
+if height of content = 200;
+then without border box, total height of content is > 200            (including m, p, b)    260 = c(200) + m(15+15) + b(5+5) + p(10+10)         (content height remains same)
+and with border box, height of content is 200                   (including p, b)       200 = c(178) - p(20) - b(2)                              (content size is adjusted decreases)
+
+-->
