@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units - px, rem, em, vh, vw, % & more</title>
+    <style>
+        *{
+            margin: 0;               
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            /*width: 1920px*/               /* my  laptop is 1920*1200, above full-hd*/
+            width: 80vh;
+            height: 10vh;
+            margin: auto;                   /*auto apply margin from both sides*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            width: 80vh;
+            /* height: 80vh; */
+            min-height: 40vh;                    /*I want to maintain min height but height should be adjusted when i add more content*/
+            margin: 23px auto;                   /*Top Margin "Space" Bottom Margin*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .container p{
+            font-size: 0.8em;                      /*paragraph will inherit font size as it is from container if em is'nt applied*/
+            width: 50%;       /*Percentage unit*/
+        }
+        .mycont{
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin;    100vh for this device */
+            width: 80vw;
+            box-sizing: border-box;
+            margin: 23px auto;
+            border: 2px solid black;                       
+
+        }
+    </style>
+</head>                         
+<body>
+    <!-- <div>
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">CSS Sizing Units - px, rem, em, vh, vw, % & more</h1>
+    </div> -->
+
+    <div>
+        <p class="box">This is a box</p>
+    </div>
+
+    <!-- <span class="box">
+        This is a box
+    </span> -->
+    
+    <div class="container">
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid dolores quam ut beatae repellat eligendi vel, nam voluptas laborum rerum qui hic nostrum est dignissimos. Tempora itaque placeat consequuntur.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas laboriosam dignissimos nobis quisquam rem incidunt at voluptatum repellendus fugiat vero vitae quia nostrum dolor animi cumque quae, ipsam sed molestias magni vel illum praesentium eveniet ad quidem. Eos, libero sit numquam beatae modi itaque consequuntur harum voluptatem rerum maiores quis perspiciatis reiciendis officia tempore ullam. Debitis earum numquam neque veniam fugiat facere reprehenderit voluptas, et officia itaque sunt assumenda mollitia enim alias vero atque suscipit quasi. Porro, nostrum expedita. Vitae, voluptate doloribus! Iure dolor dolorem veritatis omnis ducimus quis quisquam, modi veniam id voluptas perspiciatis molestiae optio magni corporis, voluptatibus earum et explicabo eum ex nesciunt necessitatibus voluptatem ratione consequuntur? Dolore in nulla dolorum! Beatae consectetur, reprehenderit numquam cumque animi saepe cum. Possimus officiis ut nihil deleniti quod alias labore consequatur. Aliquid in libero sint iste, quidem ratione officiis vero. Harum officia architecto consectetur! Eos nobis consectetur, minus fuga fugit itaque distinctio quas molestias vitae reprehenderit, quasi quo odit velit labore. Non itaque iste optio consectetur incidunt dignissimos eligendi, molestias placeat! Labore, enim in aut magnam pariatur at facere aperiam suscipit ex, possimus tempora natus et eius repellat quidem ad. Mollitia dignissimos incidunt porro asperiores quisquam ipsum odit, saepe in neque exercitationem ipsa et quam vero eligendi eaque quod dicta accusantium soluta deleniti. Cum suscipit dolore blanditiis, nihil eius incidunt debitis ducimus. Aliquid vitae fugit magni consequatur necessitatibus architecto! Fuga numquam doloribus consequatur culpa, aut natus ad deleniti, autem a assumenda iusto itaque quas maiores consectetur obcaecati sed! Quibusdam ratione iure hic? Alias mollitia quod error! Quam, doloribus consectetur eveniet quia rerum sapiente quaerat ducimus provident veniam quibusdam tenetur pariatur molestiae tempore. Rerum veniam incidunt sit commodi expedita sequi, quas deserunt atque! Eaque neque veritatis corporis consectetur, delectus, dignissimos architecto, rem repellat totam blanditiis repellendus quas magnam? Blanditiis, adipisci. Porro.
+        </p>
+    </div>
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+</html>
+
+
+<!--
+
+width and margin will be only applied to Block level elements - can be centered
+Inline elements can't be centered
+
+-->
+
+<!--
+
+
+<span>
+    <p class="box">This is a box</p>
+</span>
+
+Even if you wrap a block element (<p>) inside an inline container (<span>), the block element still behaves like a block and stretches to respect margin, width, etc.
+
+-->
+
+<!--
+
+use vh and vw for most
+
+-->

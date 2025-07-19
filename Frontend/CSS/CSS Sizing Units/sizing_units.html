@@ -1,17 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <dl>px</dl>
-        <dd>pixel = 196th of an inch. Select according to your screen resolution such as 1920*1080</dd>
-        <dl>vh</dl>
-        <dd>Viewport - Height, used for responsive layout. Suppose, you have 2k screen and others have 1k screen. The sizes are adjusted according to screen resolution to avoid horizontal scroll bar.<br>Use Toggle Device Emulation to check layouts in different devices.
+      <dl>
+        <dt>px</dt>
+        <dd>
+          pixel = 196th of an inch. Select according to your screen resolution
+          such as 1920*1080
         </dd>
+        <dt>vh</dt>
+        <dd>
+          Viewport - Height, used for responsive layout. Suppose, you have 2k
+          screen and others have 1k screen. The sizes are adjusted according to
+          screen resolution to avoid horizontal scroll bar.<br />Use Toggle
+          Device Emulation to check layouts in different devices.
+          <pre>
+            1vh = 1% of the viewport height
+
+            So if the browser window is 1200px tall, then:
+
+            1vh = 12px
+            100vh = 1200px
+          </pre>
+        </dd>
+        <dt>em</dt>
+        <dd>
+          The child paragraph in a container will inherit font-size(css
+          property) as it is from container(parent) if font-size: em is not
+          applied in child. But, if em > 1 is applied in child font-size, then
+          its font size increases relative to that parent's font-size.
+          <pre>
+                1em = current font-size.
+                If a parent element has font-size: 16px, then: 
+                1em = 16px
+                2em = 32px
+                0.5em = 8px
+                Child element  will have size relative to parent.
+            </pre>
+            em is used for padding, font-size, height, width and margin
+        </dd>
+        <dt>rem</dt>
+        <dd>
+            <pre style="font-family: Arial, Helvetica, sans-serif;">
+                🔹 What is rem?
+                                rem stands for "root em", and it is a relative sizing unit based on the root element font-size, which is usually the html element.
+
+                                👉 1rem = font-size of the html element
+                                By default, most browsers set:
+
+                                html {
+                                  font-size: 16px;
+                                }
+
+                                So:
+                                1rem = 16px
+                                2rem = 32px
+                                0.5rem = 8px
+            </pre>
+        </dd>
+        <pre style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            ✅ vmin and vmax in CSS
+            These are viewport-relative units, just like vh and vw, but with a twist — they depend on the minimum or maximum dimension of the viewport.
+
+            🔹 1. vmin — Viewport Minimum
+            1vmin = 1% of the smaller side of the viewport (width or height).
+            Example: If viewport is 1920×1080:
+            1vmin = 1% of 1080 = 10.8px
+            📦 Use Case
+            Good for keeping things inside smaller screens (e.g., font size, padding).
+
+            🔹 2. vmax — Viewport Maximum
+            1vmax = 1% of the larger side of the viewport.
+            Example: Same viewport (1920×1080):
+            1vmax = 1% of 1920 = 19.2px
+            📦 Use Case
+            Useful for scaling things up on wider screens (e.g., hero banners, headings).
+
+            🧪 Quick Example
+            .box {
+              width: 50vmin; /* 50% of the smaller side */
+              height: 50vmax; /* 50% of the larger side */
+              background-color: lightseagreen;
+            }
+        </pre>
+        <dt>Percentage - %</dt>
+        <dd>
+            <pre style="font-family: 'Times New Roman', Times, serif;">
+                🔹 1. Width & Height
+                ✅ width: 50%;
+                Means: 50% of the parent element's width
+
+                ⚠️ height: 50%;
+                Means: 50% of the parent element’s height, only if the parent has an explicitly set height.
+                If parent height is not set, `% height won't work as expected.
+
+                🔹 2. Padding & Margin
+                ✅ Padding & margin percentages are based on the width of the containing block, not height — even for vertical padding/margin.
+                            
+                .box {
+                  width: 100%;
+                  padding-top: 50%; /* 50% of width, not height! */
+                }
+                 
+                This is a classic trick to maintain aspect ratio (e.g., for a square box or responsive video).
+            </pre>
+        </dd>
+      </dl>
     </div>
-</body>
+  </body>
 </html>
