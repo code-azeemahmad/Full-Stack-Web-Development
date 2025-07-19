@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        h1{                             /*S = 1*/
+            color: aqua;
+        }
+        .cyellow{
+            color: yellow;            /*S = 10*/
+        }
+        .cred{                          
+            color: red;               /*S = 10*/
+        }
+        /* [data-x = a]{
+            color: coral;        Attribute Selector   S = 10
+        } */
+        .cpurple{                       
+            color: purple ;           /*S = 10, winner --> high S and last in order*/
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="cyellow cred cpurple" data-x = "a">CSS Specificity and Cascade</h1>
+</body>
+</html>
+
+
+<!--
+
+.cred{                                   /*S = 10*/
+    color: red !important;    /*!important has highest specificity, it will overwrite inline style also*/
+}
+
+-->
+
+
+<!-- 
+
+Avoid using inline and !important, make your websites simpler using Classes to increase reuseability and avoid specifiic websites
+
+-->

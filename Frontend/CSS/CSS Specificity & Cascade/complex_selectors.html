@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        h1{                             /*S = 1*/
+            color: aqua;
+        }
+        h1.cyellow{         
+            color: yellow;            /* h1(S = 1) + cyellow(S = 10) --> S = 11, WINNER*/
+        }
+        .cred{                          
+            color: red;               /*S = 10*/
+        }
+        .cpurple{                       
+            color: purple ;           /*S = 10, winner --> high S and last in order*/
+        }
+
+        a.harryclass.rohanclass[href]:hover{      
+            color: blue;
+        }
+
+        /* Element_Selector(S=1) + Class(S=10) + Class(S=10) + Attribute_Selector(S=10) + Pseudo_Class(S=10) = 41 */
+        
+    </style>
+</head>
+<body>
+    <h1 class="cyellow cred cpurple" data-x = "a">CSS Specificity and Cascade</h1>
+</body>
+</html>
+
+
