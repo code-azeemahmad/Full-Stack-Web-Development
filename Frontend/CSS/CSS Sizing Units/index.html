@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units - px, rem, em, vh, vw, % & more</title>
+    <style>
+        *{
+            margin: 0;               
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            /*width: 1920px*/               /* my  laptop is 1920*1200, above full-hd*/
+            width: 80vh;
+            height: 10vh;
+            margin: auto;                   /*auto apply margin from both sides*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            width: 80vh;
+            height: 80vh;
+            margin: 23px auto;                   /*Top Margin "Space" Bottom Margin*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">CSS Sizing Units - px, rem, em, vh, vw, % & more</h1>
+    </div> -->
+
+    <div>
+        <p class="box">This is a box</p>
+    </div>
+
+    <!-- <span class="box">
+        This is a box
+    </span> -->
+    
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid dolores quam ut beatae repellat eligendi vel, nam voluptas laborum rerum qui hic nostrum est dignissimos. Tempora itaque placeat consequuntur.
+    </div>
+</body>
+</html>
+
+
+<!--
+
+width and margin will be only applied to Block level elements - can be centered
+Inline elements can't be centered
+
+-->
+
+<!--
+
+
+<span>
+    <p class="box">This is a box</p>
+</span>
+
+Even if you wrap a block element (<p>) inside an inline container (<span>), the block element still behaves like a block and stretches to respect margin, width, etc.
+
+-->
