@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>                           
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid blue;
+            display: inline-block;                        /* make block element an inline element */
+            padding: 40px;                          /* inline element does not respect padding, in order to make it respect, make it inline-block */
+            width: 350px;
+            margin: 20px;
+            
+        }
+        .box1{
+            /* display: none; */                    /* removes the div and its space also*/
+            visibility: hidden;                     /* hides the div but retains space */
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am a box
+    </div>
+    <div class="box">
+        and also a nice box
+    </div>
+    <span>
+        I am a good
+    </span>
+    <span>
+        boy
+    </span>
+</body>
+</html>
+
+
+<!--
+
+Display: inline property prevents width from having an effect
+
+-->
