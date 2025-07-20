@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS</title>   <!-- Style Lists using CSS in Nav Bars -->
+    <style>
+        nav ul li{
+            list-style: none;
+            /* background: #89f9ff; */
+            /* list-style-position: inside; */
+            /* border: 2px solid blue; */
+            /* list-style-type: "🙉";  */
+            /* list-style-image: url("Bomb Girl (1)(1).jpg"); */
+            /* list-style: disc inside url("Bomb Girl (1)(1).jpg"); */
+
+            display: flex;
+        }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <ul style="display: flex; padding: 23px;">
+            <li style="padding: 23px;">Home</li>         <!-- List item consists of marker and item -->
+            <li style="padding: 23px;">About</li>        <!-- list-style = none; to remove marker -->
+            <li style="padding: 23px;">Contact</li>      <!-- Adding in element.style{} will add as an inline css-->
+        </ul>
+    </nav>
+</body>
+</html>
