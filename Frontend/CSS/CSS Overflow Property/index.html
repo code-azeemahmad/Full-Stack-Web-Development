@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>    <!-- make scroll bars -->
+    <style>
+        .box{
+            width: 10vw;
+            height: 20vh;
+            border: 2px solid blue;
+            /* overflow: scroll; */
+            /* white-space: nowrap; */
+            /* text-overflow: ellipsis; */
+            /* overflow-x: scroll; */
+            /* overflow-y: scroll; */
+            overflow: scroll scroll;      /* shorthand  for x and y*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a good boy and I love to read Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi expedita, repellendus vitae dicta laborum corrupti quis! Voluptate vitae, enim dolor minima libero repudiandae alias aut rem! Atque, voluptatum vel. Quam veniam voluptatem aspernatur animi impedit qui cupiditate alias quo quasi minima nulla delectus, optio quibusdam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi fugiat corrupti at officiis natus odit, dicta veritatis eaque corporis. Adipisci itaque hic corrupti dolorum, voluptatum nobis, minima inventore obcaecati quod maiores facere dolor asperiores aperiam voluptatem illum impedit explicabo debitis omnis. Voluptate ullam, sed ipsa repellendus nihil fugit? Reiciendis natus deserunt reprehenderit dignissimos vitae veritatis ea.
+    </div>
+</body>
+</html>
+
+<!-- overflow: auto; automatically detects whether scroll bar is needed or not -->
+<!-- overflow: scroll; always places a scroll bar -->
+<!-- whitespace: nowrap; takes full space and don't push text in next line -->
+<!-- text-overflow: ellipsis; puts 3 dots in the last -->
+<!-- overflow: clip; you can't scroll programmatically-->
+<!-- manually control overflow using overflow - x and overflow - y -->
