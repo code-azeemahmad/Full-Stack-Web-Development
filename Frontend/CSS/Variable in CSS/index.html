@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>   <!-- switch between black and white theme -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            --color: rgb(123, 150, 255);
+            --seccolor: rgb(195, 195, 252);
+        }
+
+        .nav {
+            background: var(--color);
+        }
+        ul {
+            display: flex;
+        }
+        ul li {
+            list-style: none;
+            padding: 40px;
+            border: 2px solid var(--seccolor);
+        }
+
+        ul li:first-child{
+            --color: rgb(255, 128, 230);
+            background-color: var(--color);
+        }
+        .container {
+            background: var(--seccolor);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea eveniet consequuntur explicabo laboriosam sed ratione, quod accusantium nobis corporis, suscipit nisi reprehenderit animi distinctio quas est accusamus dolorem voluptas vel quae sapiente adipisci incidunt! Corrupti accusamus mollitia at impedit quos laborum quod inventore ullam qui.
+    </div>
+
+</body>
+</html>
+
+<!-- display: flex; is applied to list, not on list items -->
+
+<!-- 
+
+.nav ul{
+            display: flex;        
+            list-style: none;
+            gap: 40px;              gap: 20px; is more preferable and semantically correct than applying margin and padding to each list item
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+-->
+
+
+<!--
+
+✅ ul li
+Meaning: Targets all <li> (list item) elements that are inside a <ul> (unordered list).
+
+✅ ul li:first-child
+Meaning: Targets only the first <li> inside any <ul>.
+
+-->
+
+<!-- CSS variables can hold other properties like padding, opacity, strings, values, urls -->
