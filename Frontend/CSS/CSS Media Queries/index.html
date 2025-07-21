@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries in CSS</title>  <!-- to make responsive websites -->
+    <style>
+        body {
+            background: #ffa5a5;
+        }
+            @media screen and (orientation: landscape) {
+                body {
+                    border: 4px solid rgb(180, 74, 255);
+                }
+            }
+
+        @media only screen and (max-width: 500px) {
+            body {
+                background: #9fa3ff;  
+            }     
+            .boxes {
+                flex-direction: column;
+            }
+        }
+        .boxes {
+            display: flex;
+    
+        }
+        .box {
+            width: 344px;
+            height: 344px;
+            background: #7bff79;
+            padding: 3cap;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        I am a red body guy!!!
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+
+<!--
+
+        @media not| only media type and (expressions){
+            CSS Code {
+
+            }
+        }
+
+-->
+
+
+<!-- we will mostly use media queries in raw css untill we start using frameworks like tailwind css or  bootstrap -->
