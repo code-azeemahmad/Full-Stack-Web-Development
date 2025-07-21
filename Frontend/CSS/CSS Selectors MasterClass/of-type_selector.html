@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>of-type_selector in css</title>
+    <style>
+        /* if you want 1st and 2nd p till nth p independent of child relationships */
+    main p:nth-of-type(1) {
+        color: darkblue;
+        background-color: aqua;
+    }
+
+    main p:nth-of-type(2) {
+        color: crimson;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+            Hey! I am First Child because I come First and I am a child of the main element.
+        </p>
+        <p>
+            Hey! I am Second Child because I come Second and I am a child of the main element.
+        </p>
+    </main> 
+</body>
+</html>
+
+
+<!--
+
+If you're targeting the first and second <p> elements specifically, and not just children in general, use:
+
+    main p:nth-of-type(1) {
+        color: darkblue;
+        background-color: aqua;
+    }
+
+    main p:nth-of-type(2) {
+        color: crimson;
+    }
+
+-->
