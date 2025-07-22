@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multicolor Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --color: rgb(255, 255, 255);
+        --seccolor: rgb(31, 12, 93);
+      }
+
+      @media only screen and (max-width: 1280px) {
+        :root {
+          --color: rgb(0, 0, 0);
+          --seccolor: rgb(255, 255, 255);
+        }
+      }
+      body {
+        background-color: rgb(240, 185, 255);
+      }
+      .container {
+        background-color: var(--seccolor);
+        max-width: 100vw;
+        height: 13vh;
+      }
+      ul {
+        display: flex;
+        gap: 40px;
+        padding: 30px 15px;
+      }
+      li {
+        color: var(--color);
+
+        list-style: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      pre {
+        margin: 0;
+        padding: 0;
+      }
+      code {
+        color: var(color);
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      input {
+        padding: 6px;
+        border: none;
+        border-radius: 20px;
+      }
+      li:nth-of-type(8) input::placeholder {
+        color: gray;
+      }
+      .btn {
+        color: var(--color);
+        background-color: var(--seccolor);
+        border: solid;
+        border-color: gray;
+        border-radius: 8px;
+        padding: 1px 8px 1px;
+        font-size: 18px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      img {
+        position: relative;
+        top: -14px;
+        padding: 0px;
+        border: none;
+        border-radius: 46px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <ul>
+          <li>
+            <pre><code>&lt;/&gt;CodeWithHarry</code></pre>
+          </li>
+          <li>Home</li>
+          <li>Courses</li>
+          <li>Tutorials</li>
+          <li>Blogs</li>
+          <li>Notes</li>
+          <li>Contact</li>
+          <li><input type="text" placeholder="Search..." /></li>
+          <li><button class="btn">Sign up</button></li>
+          <li><button class="btn">Log in</button></li>
+          <li>
+            <img
+              style="width: 50px"
+              src="https://pbs.twimg.com/profile_images/1357527512172011521/ENeQlgiY_400x400.jpg"
+              alt="Monster"
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
+
+<!-- 
+
+CSS is read top-to-bottom, and later rules override earlier ones if they have the same specificity.
+
+So in your case:
+
+The media query sets light colors for screens ≥1280px.
+
+But after the media query, you override everything again for all screen sizes:
+
+:root {
+  /* Default for smaller screens */
+  --color: rgb(255, 255, 255);
+  --seccolor: rgb(31, 12, 93);
+}
+
+So the @media (min-width: 1280px) rules will never take effect, because they are overridden unconditionally by the last :root.
+
+To fix it, you should define default styles first, then override them with the media query:
+
+:root {
+  /* Default for smaller screens */
+  --color: rgb(255, 255, 255);
+  --seccolor: rgb(31, 12, 93);
+}
+
+@media only screen and (min-width: 1280px) {
+  :root {
+    --color: rgb(0, 0, 0);
+    --seccolor: rgb(255, 255, 255);
+  }
+}
+
+-->
