@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child {
+            background: red;
+        } */
+
+        /* .box::first-line {
+            color: blue;
+        } */
+
+        /* .boxes * {
+            color: red;
+            border: 2px solid black;
+        }
+
+        [data-color="primary"] {
+            margin-top: 50px;
+        }
+
+        .box, p, a [data-color="primary"] {    
+            padding: 10px;                          Grouping of Selectors
+        } */
+
+        /* .box:nth-child(odd) {
+            background: blueviolet;
+        } */
+
+        .boxes::before {
+            content: "Ethical Hacking, Pentesting.";
+            color: blue;
+        }
+        .boxes::after {
+            content: "Quantum Cryptography.";
+            color: red;
+        }
+
+        ::selection {
+            background-color: rgb(137, 137, 255);
+        }
+
+        .box::first-letter {
+            color: rgb(230, 0, 255);
+            font-size: x-large;
+        }
+        input::placeholder {
+            color: rgb(100, 101, 101);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box" data-color="primary">I am a box</div>
+        <div class="box">I am a box</div>
+        <div class="box">I am a box</div>
+        
+    </div>
+    <br>
+    <input type="text" placeholder="Type your name here.">
+</body>
+</html>
+
+
+<!-- 
+
+.box:first-child {
+            it means that if .box is first child of his parent(boxes)
+        }
+
+.boxes:first-child {
+            it means that if .boxes is first child of his  parent (body)
+        }
+
+.boxes::before {
+            content: "Ethical Hacking, Pentesting.";            intoducing inserting element dynamically via css 
+        }
+
+.boxes::after {
+            content: "Ethical Hacking, Pentesting.";            are called "Psuedo Elements"
+        }
+
+
+-->
