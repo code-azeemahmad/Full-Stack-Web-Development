@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid blue;
+            display: grid;
+            width: 80vw;
+            grid-template-columns: 1fr 2fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 30px 30px;
+            justify-items: center;
+            align-items: center;
+
+        }
+        .item {
+            border: 2px solid red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+
+    </div>
+</body>
+</html>
+
+
+<!--
+
+✅ fr Unit in CSS Grid
+The fr unit stands for fraction of available space.
+It is used only in CSS Grid to divide space proportionally.
+
+🔹 Basic Syntax:
+
+grid-template-columns: 1fr 2fr 1fr;
+This divides the container’s width into:
+
+1 part (first column)
+
+2 parts (second column)
+
+1 part (third column)
+
+Total = 1 + 2 + 1 = 4 parts
+➡ So actual width distribution is:
+
+25% (1/4)
+
+50% (2/4)
+
+25% (1/4)
+
+-->
