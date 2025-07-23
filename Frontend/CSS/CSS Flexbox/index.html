@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid rgb(255, 0, 0);
+            display: flex;    
+            height: 80vh;                      
+            /* justify-content: center;         */
+            align-items: center;
+            /* align-content: flex-start; */
+            flex-flow: row nowrap;
+            /* gap: 30px 40px;   gap: <row-gap> <column-gap>; */
+            gap: 30px;
+            
+        }
+        .item {
+            /* flex-grow: 1; */
+            background-color: blueviolet;
+            width: 92px;
+            height: 92px;
+            border: 2px solid black;
+            /* margin: 4px; */
+        }
+        /* .order-1 {
+            order: 1;
+        }
+        .order-2 {
+            order: 2;
+        }
+        .order-3 {
+            order: 3;
+        }
+        .order-4 {
+            order: 4;
+        } */
+        .item1 {
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1 order-1">1</div>
+            <div class="item order-2">2</div>
+            <div class="item order-3">3</div>
+            <div class="item order-4">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            
+            
+        </div>
+    </main>
+</body>
+</html>
+
+
+<!-- display: flex; should be applied to  container, not on items -->
+<!-- display: flex; properties should be applied to  container, not on items -->
+
+
+<!-- 
+
+🔄 When flex-direction: column is used:
+ # justify-content becomes vertical
+ # align-items becomes horizontal
+
+🔄 When flex-direction: row is used:
+ #justify-content becomes horizontal, Used to center content horizontally in a flex container.
+ #align-items becomes vertical, Used to center content vertically in a flex container.
+                                                                                          Main Axis
+🔄 Justify content aligns items according to main axis or cross axis                    ------------/> 
+                                                                                        |
+                                                                                        | 
+                                                                             Cross Axis |
+                                                                                        |
+                                                                                        *
+ -->
+
+ <!-- flex-wrap: wrap; wrap the items to fit in container to avoid leakage -->
+<!-- align-content: center; when content is spread into multiple lines -->
+
+<!-- 
+flex-flow: <flex-direction> <flex-wrap>;           flex-flow = flex-direction + flex-wrap
+nowrap → all items stay on one line (default)
+wrap → items wrap to next line 
+-->
+
+<!-- order: 1; to place the items in a specific order, less order is placed before and greater order is placed after  -->
+ <!-- default order is zero -->
+
+<!-- 🔹 flex-grow
+This defines how much a flex item can grow relative to the rest.
+
+.item {
+  flex-grow: 1;
+}
+👉 Meaning:
+If multiple items have flex-grow: 1, they will grow equally to fill remaining space.
+
+If one item has flex-grow: 2, it will take twice as much space as items with flex-grow: 1.
+-------------------------------------------------------------------------------
+🔹 flex-shrink
+This defines how much a flex item can shrink if there's not enough space.
+
+.item {
+  flex-shrink: 1;
+}
+👉 Meaning:
+If space is tight, items shrink in proportion to flex-shrink value.
+
+If set to 0, the item will not shrink at all.
+-------------------------------------------------------------------------------
+🔹 align-self
+Overrides the align-items property for a single item.
+]
+.item {
+  align-self: center;
+}
+👉 Values:
+auto (inherits from align-items)
+
+flex-start
+
+flex-end
+
+center
+
+stretch
+
+baseline
+
+📌 Use Case:
+Useful when one item needs to align differently than the others. -->
