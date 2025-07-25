@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            max-width: 100vw;
+            height: 60vh;
+            border: 2px solid black;
+            background-color: rgb(215, 215, 215);
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(2, 100px);
+            /* When the container is big and grid is small, use justify-content and align-content to align the grid in center horizontally and vertically */
+            justify-content: center;
+            align-content: center;
+        }
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

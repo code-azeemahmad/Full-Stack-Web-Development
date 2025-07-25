@@ -11,11 +11,15 @@
             border: 2px solid blue;
             display: grid;
             width: 80vw;
-            grid-template-columns: 1fr 2fr 1fr; 
+            
             grid-template-rows: 1fr 1fr 1fr;
+            /* grid-template-columns: 1fr 2fr 1fr;  */
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
             gap: 30px 30px;
-            justify-items: center;
-            align-items: center;
+            justify-items: center;            /* to center the items in their respective cells in grid */
+            align-items: center;              /* to center the items in their respective cells vertically when height is given */
+            justify-items: flex-start;
 
         }
         .item {
@@ -65,3 +69,9 @@ Total = 1 + 2 + 1 = 4 parts
 25% (1/4)
 
 -->
+
+<!-- don't use padding or margin in grid, use gap -->
+
+<!-- flex properties are applied to flexbox -->
+
+<!-- grid properties are applied to individual cells -->
