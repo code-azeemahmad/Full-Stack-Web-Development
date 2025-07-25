@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        .container {
+            margin: 50px;
+            width: 100%;
+            max-width: 100vh;
+            height: 60vh;
+            border: 2px solid black;
+        }
+        .box {
+            color: wheat;
+            background: red;
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            /* transform: rotate(40deg); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* transform: rotate(0.5turn); */
+            /* transform: rotatey(60deg); */
+            /* transform: scaleX(2.6); */
+            /* transform: skewX(5deg); */
+            /* transform: translateX(200px); most used property */
+            /* transform-origin: 0% 0%;  rotates about origin */
+            transform: translateY(100px) skewX(10deg) translateX(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+    </div>
+</body>
+</html>
+
+<!-- transform properties are used when we want to hide nav bar -->
