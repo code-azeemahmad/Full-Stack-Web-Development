@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container {
+            background: #dcdcdc;
+            margin: 50px;
+            width: 100%;
+            max-width: 100vh;
+            height: 60vh;
+            border: 2px solid black;
+        }
+        .box {
+            background: rgb(255, 0, 0);
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgb(0, 21, 255);
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: azeem;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0, 0.6, 1, 0.37);
+            animation-direction: alternate;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+        }
+        @keyframes azeem {
+            from {
+                background: red;
+            }
+            to {
+                transform: translateX(300px);
+                background: #e5ff00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+    </div>
+</body>
+</html>
