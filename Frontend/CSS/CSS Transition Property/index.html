@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        .container {
+            background: #d492d3;
+            margin: 50px;
+            width: 100%;
+            max-width: 100vh;
+            height: 60vh;
+            border: 2px solid black;
+        }
+        .box {
+            background: red;
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgb(0, 255, 8);
+            transition-property: transform, background-color;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+        }
+        .translate {
+            transform: translateX(200px) translateY(200px) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>
+
+<!-- transform properties are used when we want to hide nav bar -->
