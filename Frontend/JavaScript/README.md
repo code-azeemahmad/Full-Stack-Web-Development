@@ -24,3 +24,7 @@ Common Uses:
 --> Perform server-side logic and authentication
 --> Serve HTML/CSS/JS files
 --> Create REST APIs
+
+___________________________________________________________________________
+
+Modern Javasript is very Powerful
