@@ -19,3 +19,5 @@ console.log("Your number is " + a)
 document.title = "Hey, I am good"
 
 document.body.style.backgroundColor = "red"
+
+// Adding inline CSS through JavaScript
