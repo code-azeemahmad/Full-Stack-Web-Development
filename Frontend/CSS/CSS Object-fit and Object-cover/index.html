@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <style>
+        .container {
+            width: 466px;
+            height: 488px;
+            border: 2px solid black;
+            /* background: azure; */
+            background-image: url(https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D);
+            background-position: center center;
+
+        }
+        img {
+            width: 466px;
+            height: 488px;
+            object-fit: cover;  
+            object-position: 10px 20px;    
+            /* object-position: bottom; */
+            /* object-fit: contain; */
+            /* object-fit: fill; */
+            /* object-fit: scale-down; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="girl holding camera"> -->
+    </div>
+</body>
+</html>
+
+
+<!--
+
+cover: Fills the container by cropping.
+
+contain: Fits the entire image inside without cropping (might leave empty space).
+
+fill: Stretches image to fit (may distort).
+
+none: No scaling.
+
+scale-down: Chooses the smallest of none or contain.
+
+-->
