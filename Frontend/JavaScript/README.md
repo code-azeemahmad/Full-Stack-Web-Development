@@ -28,3 +28,11 @@ Common Uses:
 ___________________________________________________________________________
 
 Modern Javasript is very Powerful
+
+___________________________________________________________________________
+
+Node.js is basically javascript V8 engine which chrome uses to  run your script.
+After removing it, Ryan Dahl put javascript runtime in C++ program. After it, the
+use of javasript powers was possible now in computers(servers). Now, we can run 
+javasript programs using nodejs just like python programs but some programs are 
+browser specific like alert
