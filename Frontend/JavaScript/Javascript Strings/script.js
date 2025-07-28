@@ -35,3 +35,14 @@ console.log(`My name is ${name1} and my Friend's name is ${name2}`);
 console.log(a.toLowerCase()); 
 console.log(a.toUpperCase()); 
 console.log(a.length);   
+
+
+// slicing
+
+let b = "Faheem";
+
+// slice(inclusive, exclusive)
+
+console.log(b.slice(1));
+console.log(b.slice(0, 4));
+
