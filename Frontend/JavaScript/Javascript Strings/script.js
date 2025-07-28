@@ -46,3 +46,8 @@ let b = "Faheem";
 console.log(b.slice(1));
 console.log(b.slice(0, 4));
 
+// replace 
+
+console.log(b.replace("F", "90"));
+console.log(b.replace("Faheem", "Afeem"));
+
