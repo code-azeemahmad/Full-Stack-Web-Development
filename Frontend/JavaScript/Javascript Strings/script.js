@@ -55,3 +55,10 @@ console.log(b.replace("Faheem", "Afeem"));
 
 console.log(a.concat(b, "Cached"));
 
+// Remove White spaces
+
+let name3 = "   Nadeem   "
+console.log(name3.trim());
+
+
+
