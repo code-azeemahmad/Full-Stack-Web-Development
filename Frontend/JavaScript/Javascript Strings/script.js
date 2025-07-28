@@ -51,3 +51,7 @@ console.log(b.slice(0, 4));
 console.log(b.replace("F", "90"));
 console.log(b.replace("Faheem", "Afeem"));
 
+// Concatenation
+
+console.log(a.concat(b, "Cached"));
+
