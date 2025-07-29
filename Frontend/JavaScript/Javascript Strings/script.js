@@ -60,5 +60,6 @@ console.log(a.concat(b, "Cached"));
 let name3 = "   Nadeem   "
 console.log(name3.trim());
 
-
+// strings are immutable (can't be changed). 
+// You can make changes in string but the original string remains intact
 
