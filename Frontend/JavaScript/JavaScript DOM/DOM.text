@@ -1,0 +1,40 @@
+The Document Object Model (DOM) is a programming interface
+provided by browsers to interact with HTML and XML documents.
+It represents the structure of a web page as a tree of objects,
+where each HTML element is a node.
+_________________________________________________________________________________________________
+| Concept            | Description                                                              |
+| ------------------ | ------------------------------------------------------------------------ |
+| **Document**       | The root object (`document`) representing the entire web page            |
+| **Nodes/Elements** | Each HTML tag becomes a node in the tree (like `<h1>`, `<p>`, `<div>`)   |
+| **Tree Structure** | Elements are nested inside each other like a family tree                 |
+| **Browser API**    | You can use JavaScript to access and modify the page content dynamically |
+|____________________|__________________________________________________________________________|
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+
+Becomes a tree structure like:
+
+Document
+ └── html
+     ├── head
+     │   └── title
+     └── body
+         ├── h1
+         └── p
+
+
+📌 Use of DOM
+✅ Dynamically update content
+✅ Handle events (click, hover, etc.)
+✅ Validate forms
+✅ Build interactive apps (like calculators, to-do lists)

@@ -1,0 +1,16 @@
+The BOM (Browser Object Model) is different from the DOM
+While the DOM gives you control over the content (HTML), 
+the BOM gives you control over the browser itself — like
+the window, history, location bar, alerts, etc.
+
+______________________________________________________________________________
+| Feature     | DOM                     | BOM                                |
+| ----------- | ----------------------- | ---------------------------------- |
+| Stands for  | Document Object Model   | Browser Object Model               |
+| Focus       | HTML document structure | Browser environment                |
+| Root Object | `document`              | `window`                           |
+| Example Use | Change page content     | Redirect page, open new tab, alert |
+|____________________________________________________________________________|
+
+
+BOM is not standardized (unlike DOM), so it may behave slightly differently across browsers.
