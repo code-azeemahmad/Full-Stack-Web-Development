@@ -10,6 +10,8 @@ let an1 = "Limited";
 let an2 = "Bros";
 let an3 = "Hub";
 
+// switch case statements compare values, not logical operators
+
 function name_generator(c)
 {
     let rand = Math.random();
