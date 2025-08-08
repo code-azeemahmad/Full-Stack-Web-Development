@@ -26,5 +26,6 @@ console.log(document.querySelectorAll(".box").forEach( e=> {
 
 console.log(document.querySelectorAll(".box").forEach(e=> {
     console.log(e);
+    
 }))
 

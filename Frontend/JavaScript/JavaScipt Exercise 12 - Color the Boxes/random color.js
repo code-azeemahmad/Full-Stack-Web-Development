@@ -16,6 +16,7 @@ Array.from(boxes).forEach(e=>{
     e.style.color = getRandomColor()
 })
 
+
 // to generate random number between a and b, a + Math.random() * (b - a)
 
 // to generate random color between black and white, 0 + Math.random() * (255 - 0)
