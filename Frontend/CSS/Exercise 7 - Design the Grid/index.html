@@ -1,46 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise 7 - Design this Grid</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        #id1 {
-            width: 80vw;
-            height: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        .box {
-            background-color: rgb(244, 244, 244);
-            border: 2px solid black;
-            /* width: 250px; */
-            height: 200px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 16px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #id1 {
+        width: 80vw;
+        height: auto;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+      .box {
+        background-color: rgb(244, 244, 244);
+        /* border: 2px solid black; */
+        border: none;
+        border-radius: 8px;
+        /* width: 250px; */
+        height: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+      }
+      button {
+        background-color: #5cb85c;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 15px;
+      }
+      .box div:nth-child(4) {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .box div:last-child {
+        font-size: 10px;
+        word-break: break-all;
+        line-height: 13px;
+        text-align: center;
+      }
+      .box div:nth-child(2) {
+        padding: 15px;
+      }
+      #id1 div:last-child {
+        grid-column: 2/ 3;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="id1">
-        <div class="box">English</div>
-        <div class="box">Dutch</div>
-        <div class="box">Spanish</div>
-        <div class="box">Italian</div>
-        <div class="box">French</div>
-        <div class="box">Portuguese</div>
-        <div class="box">Japanese</div>
-        <div class="box">Korean</div>
-        <div class="box">Mandarin</div>
-        <div class="box">Chinese</div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">English</div>
+        <div style = "font-size: 15px;">Enjlese</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Dutch</div>
+        <div style = "font-size: 15px;">German</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Spanish</div>
+        <div style = "font-size: 15px;">espanol</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Italian</div>
+        <div style = "font-size: 15px;">Italiano</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">French</div>
+        <div style = "font-size: 15px;">Francais</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Portuguese</div>
+        <div style = "font-size: 15px;">Portugues</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Japanese</div>
+        <div style = "font-size: 15px;">日本</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Korean</div>
+        <div style = "font-size: 15px;">한국어</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Mandarin</div>
+        <div style = "font-size: 15px;">華語</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
+      <div class="box">
+        <div style="font-weight: bold; font-size: 23px;">Chinese</div>
+        <div style = "font-size: 15px;">华语</div>
+        <div><button><a href="ue_spanish_64.exe">Download 64 - bit</a></button></div>
+        <div>SHA 256</div>
+        <div>3652B8B1A9D20F9779E2C6A4CBF3DBEA46BE184BD7B99E9E2366ECC45819F845</div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
+
+
+<!--
+
+.box div:nth-child(4)
+it means:
+
+“Inside .box, select the 4th child that is specifically a <div>.”
+
+-->
