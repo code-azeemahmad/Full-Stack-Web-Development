@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7 - Design this Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #id1 {
+            width: 80vw;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .box {
+            background-color: rgb(244, 244, 244);
+            border: 2px solid black;
+            /* width: 250px; */
+            height: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">
+        <div class="box">English</div>
+        <div class="box">Dutch</div>
+        <div class="box">Spanish</div>
+        <div class="box">Italian</div>
+        <div class="box">French</div>
+        <div class="box">Portuguese</div>
+        <div class="box">Japanese</div>
+        <div class="box">Korean</div>
+        <div class="box">Mandarin</div>
+        <div class="box">Chinese</div>
+    </div>
+</body>
+</html>
