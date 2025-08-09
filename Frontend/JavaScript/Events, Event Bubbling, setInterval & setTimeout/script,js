@@ -1,0 +1,19 @@
+let button = document.getElementById("btn");
+
+// button.addEventListener("click", ()=> {
+//     alert("I was clicked by Azeem")
+// })
+
+button.addEventListener("dblclick", ()=> {
+    document.querySelector(".box").innerHTML = "Hey you pushed me down";
+})
+
+button.addEventListener("contextmenu", ()=> {
+    alert("Dont hack us by right click");
+})
+
+button.addEventListener("keydown", ()=> {
+    document.querySelector(".box").innerHTML = "so you have started using keyboard";
+})
+
+// Mouse, keyboard, full screen, form submission events --> go for MDN reference
