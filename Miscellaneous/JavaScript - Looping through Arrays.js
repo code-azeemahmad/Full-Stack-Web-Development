@@ -74,4 +74,22 @@ _______________________________________________________________________
 |___________|__________________|______________________________________|                       
 */
 
+// __________________________Array.From___________________________________
 
+let str = "Azeem";
+let arr = Array.from(str);
+console.log(arr);
+
+let e  = [1, 2, 3, 4, 5];
+const doub = Array.from(e, num => num*2);  // using map function directly
+console.log(doub);
+
+let arrr = Array.from({ length: 5 }, (_, i) => i + 1);      // creating arrays eith given length
+console.log(arrr); // [1, 2, 3, 4, 5]
+
+// When to Use Array.from()
+
+// Converting DOM NodeLists to real arrays:
+
+let divs = document.querySelectorAll("div");
+let divArray = Array.from(divs);
