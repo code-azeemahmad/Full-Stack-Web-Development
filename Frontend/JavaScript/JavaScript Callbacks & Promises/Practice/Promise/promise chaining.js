@@ -47,6 +47,7 @@ function AsyncFunct2() {
 //     prom2.then((res) => {});
 // })
 
+
 // same work was doing with callback but promises syntax is easier and cleaner
 
 console.log("Fetching Data 1.........")       // more cleaner syntax
