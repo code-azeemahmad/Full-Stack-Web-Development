@@ -12,8 +12,9 @@
 function getData(dataId, getNextData) {             // get Data() will return a promise when called
     return new Promise((resolve, reject) => {
         setTimeout (() => {
-            console.log("Data: ", dataId);          // show pending before timeout or before printing data
-            resolve("Success");                     // after timeout, promise is resolved after printing data
+            // console.log("Data: ", dataId);          // show pending before timeout or before printing data
+            // resolve("Success");                     // after timeout, promise is resolved after printing data
+            reject("errorr")
             if (getNextData) {
                 getNextData();
             }
