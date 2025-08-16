@@ -3,16 +3,41 @@
 
 const url = "https://catfact.ninja/facts";      
 
+let factpara = document.querySelector("#fact");
+
+const btn = document.querySelector("#btn");
+
 const getFact = async() => {
     console.log("Getting Data...");
     let response = await fetch(url);        // return first promise        
     console.log(response);
-    let data = await response.json();       // return first promise
-    console.log(data.data[0].fact);                      // extracted useable data from response
+    let data = await response.json();       // return second promise
+    factpara.innerHTML = data.data[1].fact;                      // extracted useable data from response
 };
+
+btn.addEventListener("click", getFact);
+
+
+//___________________same func using Promise Chaining_____________________________
+// function getFact() {
+//   fetch(URL)                           // fetch returns a Promise
+//     .then((response) => {
+//         return response.json();     // convert response into JSON
+//     }) 
+//     .then((data) => {
+//       console.log(data);                        // see the full JSON object
+//       factpara.innerText = data.data[2].fact;       // access the 3rd fact
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching facts:", error);
+//     });
+// }
+
+
 
 
 // .json() method parses json format into js object
+
 
 
 /*
