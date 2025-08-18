@@ -15,10 +15,6 @@ let fortuner = new ToyotaCar();     // new creates an object
 fortuner.stop();
 fortuner.setBrand("Toyota");
 
-
-
-
-
 /*
 Class: 
       is a program code template for creating objects.
