@@ -1,6 +1,6 @@
 {
-  "name": "full-stack-web-development",
-  "version": "1.0.0",
+  "name": "spotify",
+  "version": "1.0.2",
   "description": "In this repository, I will post projects of full stack web development notes. Projects related to Web Development including Frontend and backend. I am doing web development using python + django/ flask for backend to make full fledge Web Applications. After learning making professional web application, I will move on to web security. My name is Muhammad Azeem Ahmad. I am currently studying in Universiity of Engineering and Technology (UET), Lahore, Pakistan.  Thanks for your attention.",
   "main": "index.js",
   "scripts": {
@@ -11,13 +11,14 @@
     "url": "git+https://github.com/code-azeemahmad/Full-Stack-Web-Development.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "azeem",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/code-azeemahmad/Full-Stack-Web-Development/issues"
   },
   "homepage": "https://github.com/code-azeemahmad/Full-Stack-Web-Development#readme",
   "dependencies": {
+    "express": "^5.1.0",
     "prompt-sync": "^4.2.0"
   }
 }
