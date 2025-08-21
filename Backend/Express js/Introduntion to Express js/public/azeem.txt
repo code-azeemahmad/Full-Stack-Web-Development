@@ -1,0 +1,3 @@
+Hey, this is Azeem's public file.
+Put it in a folder named "public" and it is now serving as a static file.
+This is how express js serves public files

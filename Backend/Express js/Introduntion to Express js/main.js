@@ -4,6 +4,11 @@ const port = 3000;
 
 //  app.get(), app.post(), app.delete(), app.put(path, handler)
 
+app.use(express.static('public'));
+/*
+“without it, no one can access the file directly; with it, the files inside public become accessible.”
+*/
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
@@ -19,7 +24,7 @@ app.get("/blog", (req, res) => {
 
 app.get("/blog/:slug/:second", (req, res) => {      // request parameters and queries
   // logic to fetch {slug} from the db
-  
+
   // For URL: http://localhost:3000/blog/intro-to-padosi?mode=dark&region=in
     console.log(req.params) // will output { slug: 'intro-to-padosi' }
     console.log(req.query) // will output { mode: 'dark', region: 'in' }
