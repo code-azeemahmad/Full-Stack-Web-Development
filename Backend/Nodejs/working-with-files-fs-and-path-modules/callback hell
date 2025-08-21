@@ -1,0 +1,23 @@
+// Practical Example of Callback Hell
+
+fs.writeFile("Harry2.txt", "Harry is a good boy", () => {
+  console.log("Done!");
+  fs.readFile("Harry2.txt", (error, data) => {
+    console.log(error, data.toString());
+    // again
+    fs.writeFile("Harry2.txt", "Harry is a good boy", () => {
+      console.log("Done!");
+      fs.readFile("Harry2.txt", (error, data) => {
+        console.log(error, data.toString());
+        // again
+        fs.writeFile("Harry2.txt", "Harry is a good boy", () => {
+          console.log("Done!");
+          fs.readFile("Harry2.txt", (error, data) => {
+            console.log(error, data.toString());
+            //  again
+          });
+        });
+      });
+    });
+  });
+});
