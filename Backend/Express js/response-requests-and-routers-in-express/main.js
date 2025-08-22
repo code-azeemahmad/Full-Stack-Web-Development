@@ -5,7 +5,7 @@ const port = 3000;
 // Serve static files from "public" folder
 app.use(express.static("public"));
 
-// // GET request
+// GET request
 app.get("/", (req, res) => {
   console.log("Hey! It's a GET request");
   res.send("Hello World! GET");
@@ -28,3 +28,22 @@ app.listen(port, () => {
   console.log(`🚀 Server running at http://127.0.0.1:${port}/`);
 });
 
+/*
+Cleaner option → use app.route()
+
+If you’re handling multiple methods on the same path (/ here), Express has a built-in helper:
+
+app.route("/")
+  .get((req, res) => {
+    console.log("Hey! It's a GET request");
+    res.send("Hello World! GET");
+  })
+  .post((req, res) => {
+    console.log("Hey! It's a POST request.");
+    res.send("Hello World! POST");
+  })
+  .put((req, res) => {
+    console.log("Hey! It's a PUT request.");
+    res.send("Hello World! PUT");
+  });
+ */
