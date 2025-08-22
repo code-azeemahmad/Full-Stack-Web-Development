@@ -1,0 +1,1 @@
+// contain endpoints starting from shop

@@ -1,9 +1,12 @@
 const express = require("express");
+const blog = require('./routing/blog')
+
 const app = express();
 const port = 3000;
 
 // Serve static files from "public" folder
 app.use(express.static("public"));
+app.use('/blog', blog)
 
 // GET request
 app.get("/", (req, res) => {
