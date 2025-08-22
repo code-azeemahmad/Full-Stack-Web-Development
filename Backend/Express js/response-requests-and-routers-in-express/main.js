@@ -23,6 +23,15 @@ app.put("/", (req, res) => {
   res.send("Hello World! PUT");
 });
 
+app.get("/index", (req, res) => {
+  console.log("Hey! It's Index");
+  res.sendFile('templates/index.html', {root: __dirname});    // serving HTML files
+});
+
+app.get("/api", (req, res) => {
+  res.json({a: 1, b: 2, c: 3, d: 4});  
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`🚀 Server running at http://127.0.0.1:${port}/`);
