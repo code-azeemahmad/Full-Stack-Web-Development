@@ -19,6 +19,7 @@ next();
 --> Route Level
 --> Built-in
 --> Third Party
+--> Error Handling
 
 # Example of Middleware Flow
 
