@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     title: "First Todo",
     desc: "Description of this Todo",
     isDone: false,
-    days: k
+    days: 20
   });
   todo.save();
   res.send("Hello World!");
