@@ -7,7 +7,9 @@
 6. npm init -y
 7. tailwindcss is just a node package.
 8. install tailwind css from documentation
-9. 
-10. 
+9. tailwindcss blocks for css block templates
+10. Concepts of breakpoints in tailwind css for responsiveness
+
+
 
 
