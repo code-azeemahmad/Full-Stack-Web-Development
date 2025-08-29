@@ -8,6 +8,8 @@ Jordan Walke - Meta Engineer, the creator of React
 - You don't have to write dom 
 - With react, code can be broken down into reusable modular components
 - Concept of props
+- React uses a virtual DOM to efficiently update the UI and which is better than updating content using DOM Manipulation
+- Debugging and maintainance is easy
 
 # Key Points
 - All the code is present in src
