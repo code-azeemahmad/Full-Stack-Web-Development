@@ -3,3 +3,8 @@
     border: 2px solid black;
     margin: 20px;
 }
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
