@@ -1,9 +1,16 @@
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Card from './components/Card';
 function App() {
   return (
     <>
     <Navbar/>
+    <div className="cards">
+      <Card title = "Card 1" description = "Descrition 1" />    {/*insertion of props */}
+      <Card title = "Card 2" description = "Descrition 2" />
+      <Card title = "Card 3" description = "Descrition 3" />
+      <Card title = "Card 4" description = "Descrition 4" />
+    </div>
     <Footer/>
       <div></div>
     </>
