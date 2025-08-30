@@ -6,9 +6,9 @@
 ``` import { useEffect } from "react";
 
 useEffect(() => {
-  // Side effect code here
+  // setup (subscribe, start timer, add event listener, etc.)
   return () => {
-    // Cleanup code (optional)
+    // cleanup (unsubscribe, stop timer, remove event listener, etc.)
   };
 }, [dependencies]);
 ```

@@ -11,14 +11,17 @@ function App() {
     alert("Count was changed!")   // Runs every time count changes.
     setcolor(color+1);
   }, [count])
-  
+
   return (
-    <>
-     <Navbar color={"dark" + "yellow" + color } />                  {/* prop send to Navbar.jsx to trigger color useEffect hook */}
-      <div>The count is {count}</div> 
+    <>       
+
+      {/* prop send to Navbar.jsx to trigger color useEffect hook  */}
+     <Navbar color={"dark" + "yellow" + color } />                  
+      <div>The count is {count}</div>     
       <button onClick={() => {
         setCount(count + 1);             
       }}>Update Count</button>
+
     </>   // REACT re-renders that component everytime whose state is changed
   )
 }

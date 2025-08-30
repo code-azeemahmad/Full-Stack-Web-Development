@@ -26,6 +26,15 @@ const Navbar = ({ color }) => {
 
 
 
+  // Example of clean up function
+  useEffect(() => {
+      alert("Hey, Welcome to my page of app.jsx")
+    return () => {  // clean up function
+      alert("Component was unmounted or removed!")
+    }
+  })
+  
+
 
   return <div>I am a navbar of {color} color hehe</div>;
 };
