@@ -4,8 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [showBtn, setshowBtn] = useState(true)
+  const [showBtn, setshowBtn] = useState(false)
 
   return (
     <>
@@ -18,10 +17,11 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      {showBtn?<button>I will show myself when second button is clicked</button>:""}   {/* Ternary operator to hide or show button depends upon true/ false of showBtn */}  
+      {showBtn?<button>I will show myself when showBtn is true</button>:<button>I will hide myself when showBtn is false</button>}
+      {/* {showBtn && <button>I will show myself when showBtn is true, otherwise hide</button>} */}
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setshowBtn(!showBtn)}>
+          Toggle showBtn
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
