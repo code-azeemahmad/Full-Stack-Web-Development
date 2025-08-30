@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,13 +6,14 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0);
 
-  let a = 0;
+  const a = useRef(0);
   
   useEffect(() => {
 
-    a = a + 1;
-    
-    alert(`re-rendering. The value of a is ${a}`)    // re-renders component when count(state variable) changes
+    a.current = a.current + 1;
+
+    alert(`re-rendering. The value of a is ${a.current}`)    // value of a persists across re renders without triggering rerenders when it changes
+    console.log(`re-rendering. The value of a is ${a.current}`)
   
   }, [count]);
   
