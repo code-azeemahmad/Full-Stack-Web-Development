@@ -25,3 +25,9 @@ const ref = useRef(initialValue);
 
 - Use state when the UI must reflect a value.
 - Use ref when the UI doesn’t need to re-render because of that value.
+
+## Usecases for useRef: 
+- [ ] Focusing a text input
+- [ ] Scrolling an image into view
+- [ ] Playing and pausing a video
+- [ ] Exposing a ref to your own component
