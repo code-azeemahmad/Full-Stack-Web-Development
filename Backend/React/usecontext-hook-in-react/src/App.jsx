@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <CounterContext.Provider value = {count}>   {/* count will be shared among all components */}
+    <CounterContext.Provider value = {{count, setCount}}>   {/* count will be shared among all components */}
       <Navbar />
       <div>
         <a href="https://vite.dev" target="_blank">
