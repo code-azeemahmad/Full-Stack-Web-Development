@@ -1,20 +1,23 @@
 import React from 'react'
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div>
       <ul>
-        <a href="/"><li>Home</li></a>
-        <a href="/login"><li>Login</li></a>
-        <a href="/about"><li>About</li></a>
+        <Link to ="/"><li>Home</li></Link>
+        <Link to ="/login"><li>Login</li></Link>
+        <Link to ="/about"><li>About</li></Link>
       </ul>
     </div>
   )
 }
 
 // <a href="..."> reloads the entire page (bad in SPAs).
+// <Link to="..."> changes the route without refreshing, keeping React state intact.
 
 export default Navbar
 
-// The problem arises when we click the link or update the page,
+// The problem arises when we click the Link or update the page,
 // the page reloads, to solve this npm i react-router-dom

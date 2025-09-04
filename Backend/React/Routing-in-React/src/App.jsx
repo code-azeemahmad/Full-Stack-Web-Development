@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
@@ -10,28 +9,39 @@ import {
   RouterProvider 
 } from "react-router-dom";
 
-function App() {
-    const router = createBrowserRouter([
-      {
-        path: "",
-        element: <Home />
-      }, 
-      {
-        path: "/login",
-        element: <Login />
-      },
-      {
-        path: "/about",
-        element: <About />
-      }
-    ]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <Home />
+      </>
+    ),
+  },
+  {
+    path: "/login",
+    element: (
+      <>
+        <Navbar />
+        <Login />
+      </>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <>
+        <Navbar />
+        <About />
+      </>
+    ),
+  },
+]);
 
-  return (
-    <>
-      <Navbar />
-      <RouterProvider router={router} />
-    </>
-  );
+function App() {
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
