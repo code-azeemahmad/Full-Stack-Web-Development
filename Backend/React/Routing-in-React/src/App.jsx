@@ -2,6 +2,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import About from "./Components/About";
+import User from "./Components/User";
 import "./App.css";
 
 import { 
@@ -37,6 +38,15 @@ const router = createBrowserRouter([
       </>
     ),
   },
+  {
+    path: "user/:username",
+    element: (
+      <>
+        <Navbar />
+        <User />
+      </>
+    )
+  }
 ]);
 
 function App() {
