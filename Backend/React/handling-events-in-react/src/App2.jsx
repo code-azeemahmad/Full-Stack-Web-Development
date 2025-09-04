@@ -8,13 +8,13 @@ function App2() {
   const handleChange = (e) => {
     // setname = (e.target.value)
     setform({...form, [e.target.name]: e.target.value});        // works async, takes time to run
-    // console.log(form);       // runs immediately so its always one step behind setform
+    console.log(form);       // runs immediately so its always one step behind setform
   }
 
   return (
     <>
-        <input type="text" name='email' value={form.email} onChange={handleChange}/>
-        <input type="text" name='phone' value={form.phone} onChange={handleChange}/>
+        <input type="text" name='email' value={form.email?form.email:""} onChange={handleChange}/>
+        <input type="text" name='phone' value={form.phone?form.phone:""} onChange={handleChange}/>
     </>
   )
 }
