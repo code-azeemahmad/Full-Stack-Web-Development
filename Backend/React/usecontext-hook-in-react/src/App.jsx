@@ -5,14 +5,15 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Component1 from './Components/Component1'
 import Button from './Components/Button'
-// import { createContext } from 'react'
+import { CounterContext } from './context/context.js'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar count = {count} />
+    <CounterContext.Provider value = {count}>   {/* count will be shared among all components */}
+      <Navbar />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -33,11 +34,13 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      </CounterContext.Provider>
     </>
   )
 }
 
-// “prop drilling” in React.
+// No prop drilling → Navbar → Button → Component1 can access state directly.
+// Shared state → all components update together.
 
 export default App
 
